@@ -5,7 +5,6 @@ class Solution:
     def minimumTime(self, N : int, cur : int, pos : List[int], time : List[int]) -> int:
         # code here
         lst = []
-        min_ = 0
         for i in range(N):
             tt = abs((pos[i] - cur) * time[i])
             lst.append(tt)
