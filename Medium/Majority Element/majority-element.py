@@ -1,4 +1,19 @@
 # Dictionary Approch
+class Solution:
+    def majorityElement(self, A, N):
+        #Your code here
+        mp = {}
+        for i in range(0, N):
+            if A[i] in mp.keys():
+                mp[A[i]] += 1
+            else:
+                mp[A[i]] = 1
+                
+            for key in mp:
+                if mp[key] > (N / 2):
+                     return key
+        return -1
+                
 
 class Solution:
     def majorityElement(self, A, N):
