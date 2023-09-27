@@ -1,4 +1,4 @@
-# Dictionary Approch
+# Dictionary Approach
 class Solution:
     def majorityElement(self, A, N):
         #Your code here
@@ -14,7 +14,7 @@ class Solution:
                      return key
         return -1
                 
-
+#Optimized Approach
 class Solution:
     def majorityElement(self, A, N):
 
