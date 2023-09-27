@@ -1,12 +1,11 @@
-#User function template for Python 3
+# Dictionary Approch
 
 class Solution:
     def majorityElement(self, A, N):
-        # Initialize the candidate and count
+
         candidate = None
         count = 0
 
-        # Find the majority candidate using Boyer-Moore Voting Algorithm
         for num in A:
             if count == 0:
                 candidate = num
@@ -16,7 +15,6 @@ class Solution:
             else:
                 count -= 1
 
-        # Verify if the candidate is indeed the majority element
         count = 0
         for num in A:
             if num == candidate:
@@ -27,10 +25,6 @@ class Solution:
         else:
             return -1
 
-                
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
 
 import math
 
