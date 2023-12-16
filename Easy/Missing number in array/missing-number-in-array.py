@@ -4,10 +4,11 @@
 class Solution:
     def missingNumber(self,array,n):
         # code here
-        n = len(array)
-        total = ((n+1)*(n+2))//2
-        arr_sum = sum(array)
-        return int(total-arr_sum)
+        s = 0
+        for i in range(1,n+1):
+            s += i
+            
+        return s - sum(array)
 
 
 #{ 
