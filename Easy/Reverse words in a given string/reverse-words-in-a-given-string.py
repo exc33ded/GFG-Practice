@@ -5,9 +5,9 @@ class Solution:
     #Function to reverse words in a given string.
     def reverseWords(self,S):
         # code here 
-        return ".".join(S.split(".")[::-1])
-        
-
+        lst = S.split(".")
+        rev = lst[::-1]
+        return ".".join(rev)
 
 #{ 
  # Driver Code Starts
