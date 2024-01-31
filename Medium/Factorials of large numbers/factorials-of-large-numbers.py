@@ -3,11 +3,12 @@
 class Solution:
     def factorial(self, N):
         #code here
-        fac = 1
-        for i in range(1,N+1):
-            fac *= i
-        return [fac]
-            
+        def fact(N):
+            if N <= 1:
+                return 1
+            else:
+                return N * fact(N-1)
+        return str(fact(N))
 
 #{ 
  # Driver Code Starts
@@ -23,4 +24,4 @@ if __name__ == '__main__':
             print(i,end="")
         print()
     
-# } Driver Code Ends
+# } Driver Code Endshttps://media.geeksforgeeks.org/img-practice/prod/courses/5/Web/Content/Clock-4_1706701529.gif
