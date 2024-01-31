@@ -14,6 +14,9 @@ class Solution:
                 max_ele = A[i]
         
         return res[::-1]
+
+
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
