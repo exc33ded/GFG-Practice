@@ -14,6 +14,7 @@ class Solution:
                 last = i
         return (first, last)
 
+
 #{ 
  # Driver Code Starts
 t=int(input())
