@@ -11,19 +11,18 @@ class Solution:
     #Function to check if the linked list has a loop.
     def detectLoop(self, head):
         #code here
-        if not head or head.next==None:
-            return False
+        slow = head
+        fast = head
         
-        s=set()
-        while head:
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
             
-            if head in s:
+            if slow == fast:
                 return True
-            s.add(head)
-            
-            head =head.next
-        
+                
         return False
+
 
 #{ 
  # Driver Code Starts
