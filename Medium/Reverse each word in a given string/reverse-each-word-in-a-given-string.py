@@ -3,10 +3,9 @@
 class Solution:
     def reverseWords(self, s):
         # code here
-        a = s[::-1]  # reverse the entire string
-        b = a.split(".")[::-1] # every element is reversed and splitted 
-        return ".".join(b) # rejoined after splittion 
-
+        a = s[::-1]
+        b = a.split(".")[::-1]
+        return ".".join(b)
 
 #{ 
  # Driver Code Starts
