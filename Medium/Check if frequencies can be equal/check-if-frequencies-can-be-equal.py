@@ -1,26 +1,29 @@
 #User function Template for python3
+from collections import Counter
+
 class Solution:
     def sameFreq(self, s):
         # code here
-        d = {}
-        for i in s:
-            d[i] = d.get(i, 0) + 1
-        values = list(d.values())
-        freq_set = set(values)
+        count=Counter(s)
         
-        if len(freq_set) == 1:
-            return True
+        freq=Counter(count.values())
         
-        if len(freq_set) == 2:
-            min_freq, max_freq = min(freq_set), max(freq_set)
-            min_freq_count = values.count(min_freq)
-            max_freq_count = values.count(max_freq)
+        if len(freq) >= 3:
+            return False
             
-            if (min_freq_count == 1 and min_freq == 1) or (max_freq_count == 1 and max_freq - min_freq == 1):
-                return True
+        if len(freq) == 1:
+            return True
+            
+        mn,mx = min(count.values()), max(count.values())
         
-        
-        
+        if freq[mx] == 1 and mn+1 == mx:
+            return True
+            
+        if 1 in freq and freq[1] == 1:
+            return True
+        return False
+
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
