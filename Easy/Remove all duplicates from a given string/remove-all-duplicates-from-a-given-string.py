@@ -5,12 +5,11 @@ class Solution:
 	def removeDuplicates(self,str):
 	    # code here
 	    res = ""
-	    for char in str:
-	        if char not in res:
-	            res += char
-	            
-	    return res
-	    
+        for char in str:
+            if char not in res:
+                res += char
+                
+        return res
 
 
 #{ 
