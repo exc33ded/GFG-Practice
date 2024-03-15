@@ -1,5 +1,6 @@
 #User function Template for python3
 
+
 class Node:
     def __init__(self,data):
         self.data=data
@@ -7,19 +8,32 @@ class Node:
 
 class Solution:
     def sort(self, h1):
-        #return head
-        lst = []
-        curr = h1
-        while curr:
-            lst.append(curr.data)
-            curr = curr.next
-        lst.sort()
-        dummy = Node(-1)
-        curr = dummy
-        for num in lst:
-            curr.next = Node(num)
-            curr = curr.next
-        return dummy.next
+        even=[h1]
+        odd=[]
+        cur=h1.next
+        while cur:
+            if len(even)>len(odd):
+                odd.append(cur)
+            else:
+                even.append(cur)
+            cur=cur.next
+        even=even[::-1]
+        head=Node(0)
+        cur=head
+        while odd or even:
+            if odd and even:
+                if odd[-1].data<=even[-1].data:
+                    tmp=odd.pop()
+                else:
+                    tmp=even.pop()
+            elif odd:
+                tmp=odd.pop()
+            else:
+                tmp=even.pop()
+            cur.next=tmp
+            cur=cur.next
+        cur.next=None
+        return head.next
 
 
 #{ 
