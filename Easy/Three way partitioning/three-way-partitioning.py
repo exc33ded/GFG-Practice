@@ -3,9 +3,9 @@
 class Solution:
     #Function to partition the array around the range such 
     #that array is divided into three parts.
-	def threeWayPartition(self, arr, a, b):
-	    # code here 
-	    low = 0
+    def threeWayPartition(self, arr, a, b):
+        # code here 
+        low = 0
         high = n-1
         
         i = 0
@@ -19,7 +19,10 @@ class Solution:
                 i -= 1 
             i += 1
         return arr  
-	            
+                
+
+
+
 
 
 #{ 
