@@ -3,7 +3,7 @@
 class Solution:
     
     #Function to return a list containing the union of the two arrays.
-    def findUnion(self,a,b,n,m):
+    def findUnion(self,arr1,arr2,n,m):
         '''
         :param a: given sorted array a
         :param n: size of sorted array a
@@ -12,9 +12,18 @@ class Solution:
         :return:  The union of both arrays as a list
         '''
         # code here 
-        return sorted(list(set(a).union(set(b))))
-
-
+        temp = []
+        unique = set()
+        for num in arr1:
+            unique.add(num)
+            
+        for num in arr2:
+            unique.add(num)
+        
+        for num in sorted(unique):
+            temp.append(num)
+            
+        return temp
 
 
 #{ 
