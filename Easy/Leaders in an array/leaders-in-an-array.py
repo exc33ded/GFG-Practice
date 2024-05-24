@@ -2,19 +2,18 @@ class Solution:
     #Back-end complete function Template for Python 3
     
     #Function to find the leaders in the array.
-    def leaders(self, A, N):
+    def leaders(self, arr, N):
         #Code here
         res = []
-        max_ele = A[N-1]
-        res.append(max_ele)
-
-        for i in range(N-2, -1, -1):
-            if max_ele <= A[i]:
-                res.append(A[i])
-                max_ele = A[i]
-        
+        leader = arr[N-1]
+        res.append(leader)
+        for i in range(N-2,-1, -1):
+            if leader <= arr[i]:
+                leader = arr[i]
+                res.append(leader)
+                
         return res[::-1]
-
+        
 
 
 #{ 
