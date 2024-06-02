@@ -4,19 +4,18 @@ class Solution:
     #Complete this function
     def findFloor(self,A,N,X):
         #Your code here
-        low = 0
-        high = N - 1
-        
-        while (low <= high):
-            mid = low + (high - low)//2
-            if (A[mid] <= X and mid == N - 1) or (A[mid] <= X and A[mid+1] > X):
-                return mid
-            elif A[mid] > X:
-                high = mid - 1
+        start = 0
+        end = N - 1
+        res = N
+        while(start <= end):
+            mid = start + (end - start)//2
+            if A[mid] > X:
+                res = mid
+                end = mid - 1
             else:
-                low = mid + 1
-        
-        return -1
+                start = mid + 1
+            
+        return res -1
 
 
 #{ 
