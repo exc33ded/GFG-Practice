@@ -19,6 +19,7 @@ class Solution:
             curr = curr.next
         return cnt
 
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
@@ -46,5 +47,6 @@ if __name__ == "__main__":
             tail = tail.next
         ob = Solution()
         print(ob.getCount(head))
+        print("~")
 
 # } Driver Code Ends
